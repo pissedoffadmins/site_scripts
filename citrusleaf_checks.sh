@@ -5,7 +5,6 @@
 # it also outputs the performance data of those numbers for usage in pnp4nagios or whatever else.
 # usage:
 # citrusleaf_checks.sh <evict|bytes|pct> <WARNING> <CRITICAL>
-#
 #####
 
 NAMESPACE="namespace/devices"
