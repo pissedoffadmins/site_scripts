@@ -30,6 +30,7 @@ fi
 
 while (true)
 do
+    DATE=`date +%s`
     NUMBER="0"
     for I in $(clinfo -h ${CL_SERVER} -p ${CL_PORT} -v ${NAMESPACE} | grep type | cut -d" " -f4 | tr ";" "\n")
     do
