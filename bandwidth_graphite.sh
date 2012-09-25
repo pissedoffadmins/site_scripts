@@ -9,6 +9,8 @@
 #
 # to run this script in cron :
 # * 3 * * * kill -9 `ps -ef | egrep graphite | grep -v grep | awk '{print $2}'` | sleep 5 && nohup sh ~/scripts/bandwidth_graphite.sh & >/dev/null 2>&1
+# or 
+# * 3 * * * kill -9 `ps -ef | awk '/graphite/&&!/awk/&&!/vim/ {print $2}'` | sleep 5 && nohup sh ~/scripts/bandwidth_graphite.sh & >/dev/null 2>&1
 #
 # legend of bwm-ng output formatted for csv :
 # unix_timestamp;iface_name;bytes_out;bytes_in;bytes_total;packets_out;packets_in;packets_total;errors_out;errors_in
