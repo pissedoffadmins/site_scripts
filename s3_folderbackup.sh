@@ -26,10 +26,10 @@ if [[ -z ${S3CMD} ]]; then
 fi
 
 # use s3cmd to print a list of existing folders in bucket
-${S3CMD} la > $LIST
+${S3CMD} la > ${LIST}
 
 # check if folders in $BKUP_PATH exist in s3, if not then copy them there
-for DIR_CHECK in `ls -al $BKUP_PATH | awk '{print $9}' | tail -n +4 | tr '/' ' ' ` ; do
+for DIR_CHECK in `ls -al ${BKUP_PATH} | awk '{print $9}' | tail -n +4 | tr '/' ' ' ` ; do
     if [[ $(grep -c $DIR_CHECK $LIST) -gt 0 ]]; then
         printf "\n${DIR_CHECK} exists in s3."
     else
