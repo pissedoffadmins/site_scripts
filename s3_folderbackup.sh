@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 ######
 # this script uses s3cmd from http://s3tools.org/s3cmd to sync a folder in linux to s3
 #
