@@ -1,0 +1,1 @@
+/home/cbodden/git/mine/pianobar/pan.sh
