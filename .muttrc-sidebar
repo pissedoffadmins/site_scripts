@@ -1,0 +1,14 @@
+# Sidebar
+set sidebar_width=30
+set sidebar_visible=yes
+set sidebar_delim='|'
+set sidebar_sort=yes
+color sidebar_new brightblue black# b toggles sidebar visibility
+
+macro index G '<enter-command>toggle sidebar_visible<enter><refresh>'
+macro pager G '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
+
+# bind index,pager \CP sidebar-prev
+bind index,pager \CK sidebar-prev
+bind index,pager \CN sidebar-next
+bind index,pager \CO sidebar-open
