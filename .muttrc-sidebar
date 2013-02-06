@@ -3,7 +3,7 @@ set sidebar_width=30
 set sidebar_visible=yes
 set sidebar_delim='|'
 set sidebar_sort=yes
-color sidebar_new brightblue black# b toggles sidebar visibility
+color sidebar_new brightblue black
 
 macro index G '<enter-command>toggle sidebar_visible<enter><refresh>'
 macro pager G '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
