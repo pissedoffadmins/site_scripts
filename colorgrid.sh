@@ -41,8 +41,7 @@ case $1 in
         cgrid
         printf "\n"
         pgrid
-        printf "\n"
-        printf "\n"
+        printf "\n\n"
     ;;
 
 'help'|*) echo "usage: $0 <normal|pastel|all>"
