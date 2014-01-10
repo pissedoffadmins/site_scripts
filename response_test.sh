@@ -67,10 +67,16 @@ function gather_info() {
   printf "${BLU}[*]${CLR} How many requests (Default 400)             : ${GRN}"
   read REQS
   [ -z ${REQS} ] && REQS=400
+  if [ ${REQS} -ge $(ulimit -n) ]; then
+    printf "${RED}[*]${CLR} ulimit is set to $(ulimit -n)\n"
+  fi
 
   printf "${BLU}[*]${CLR} How many concurrent connections (Default 10): ${GRN}"
   read CONC
   [ -z ${CONC} ] && CONC=10
+  if [ ${CONC} -ge $(cat /proc/sys/net/core/somaxconn) ]; then
+    printf "${RED}[*]${CLR} somaxconn is $(cat /proc/sys/net/core/somaxconn)\n"
+  fi
 
   printf "${BLU}[*]${CLR} For how long (Default 10 seconds)           : ${GRN}"
   read ABTIME
